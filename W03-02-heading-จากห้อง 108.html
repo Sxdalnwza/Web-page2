@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading Workshop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ebf8ff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(to right, #014ff8, #15bafc);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 90%;
+            padding-bottom: 60px;
+        }
+
+        .hero {
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            color: #313f91;
+            font-size: 48px;
+        }
+
+        .hero p {
+            color: #555555; 
+            font-size: 24px; 
+        }
+
+        .tag-color {
+            color: #447b64; 
+            font-weight: bold;
+        }
+
+        /* รูปแบบกล่องเนื้อหาหลัก (ข้อ 1 และ 2) */
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: #d5dfdb; 
+            color: #2d3834;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px 40px;
+            margin: -40px -40px 20px -40px; 
+        }
+
+        .card-margin-bt { margin-bottom: 15px; }
+
+        /* ป้ายกำกับสีคุมโทนธรรมชาติ */
+        .label {
+            display: inline-block;
+            width: 35px;
+            padding: 4px 0;
+            border-radius: 7px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .h1-label { background-color: #a67c7c;} 
+        .h2-label { background-color: #7c8ca6;} 
+        .h3-label { background-color: #7ca68a;} 
+        .h4-label { background-color: #8f7ca6;} 
+        .h5-label { background-color: #a6957c;} 
+        .h6-label { background-color: #7ca2a6;} 
+
+        /* โค้ดและพรีวิว */
+        pre {
+            background-color: #333a38;
+            color: #f4f7f6;
+            border-radius: 8px;
+            padding: 18px;
+            font-size: 16px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+
+        .preview-box {
+            background-color: #edf2f0;
+            padding: 25px 35px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .preview-box h1, 
+        .preview-box h2, 
+        .preview-box h3, 
+        .preview-box h4, 
+        .preview-box h5, 
+        .preview-box h6 {
+            color: #3d4744; 
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+        .preview-box h6 { margin-bottom: 0; }
+
+        /* --------------------------------------------------- */
+        /* ส่วนที่ 3: ดีไซน์กล่องเกร็ดความรู้ (แยกออกมาแบบอาจารย์) */
+        /* --------------------------------------------------- */
+        .knowledge-box {
+            background-color: #f7faed; /* สีพื้นหลังเขียวอมเหลืองอ่อน */
+            border: 1px solid #e8ecd6;
+            border-radius: 15px;
+            padding: 35px 40px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .knowledge-box h3 {
+            color: #447b64;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .tip-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-left: 5px solid #447b64;
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            color: #334e40;
+            font-size: 16px;
+        }
+        
+        .note-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-left: 5px solid #b19665;
+            padding: 15px 20px;
+            border-radius: 4px;
+            color: #544b3a;
+            font-size: 16px;
+        }
+
+        .tip-box strong, .note-box strong {
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <h1>เรียนรู้เว็บเบื้องต้น</h1>
+        <a href="index.html">Home</a>
+    </section>
+
+    <div class="container">
+        <div class="hero">
+            <h1 class="text-title">Workshop: HTML Heading</h1>
+            <p>ฝึกใช้แท็ก <span class="tag-color">&lt;h1&gt;</span> – <span class="tag-color">&lt;h6&gt;</span> และการปรับขนาดหัวข้อด้วย CSS</p>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-header">1. ความหมายของ Headings (H1–H6)</h2>
+            
+            <p class="card-margin-bt">HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+            <p class="card-margin-bt"><span class="label h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</p>
+            <p class="card-margin-bt"><span class="label h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</p>
+            <p class="card-margin-bt"><span class="label h3-label">H3</span> – หัวข้อย่อยภายใน H2</p>
+            <p class="card-margin-bt"><span class="label h4-label">H4</span> – ย่อยลงไปอีกระดับ</p>
+            <p class="card-margin-bt"><span class="label h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</p>
+            <p class="card-margin-bt"><span class="label h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</p>
+        </div>
+        
+        <div class="card">
+            <h2 class="card-header">2. ตัวอย่างการใช้ H1–H6</h2>
+            
+            <pre><code>&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;h2&gt;HTML Basics&lt;/h2&gt;
+&lt;h3&gt;What is HTML?&lt;/h3&gt;
+&lt;h4&gt;HTML Syntax&lt;/h4&gt;
+&lt;h5&gt;Example Code&lt;/h5&gt;
+&lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;</code></pre>
+
+            <p style="margin-top: 25px; color: #444; font-weight: bold;">เมื่อแสดงผลจะได้ขนาดลดหลั่นแบบนี้:</p>
+            
+            <div class="preview-box">
+                <h1>H1: Welcome to My Website</h1>
+                <h2>H2: HTML Basics</h2>
+                <h3>H3: What is HTML?</h3>
+                <h4>H4: HTML Syntax</h4>
+                <h5>H5: Example Code</h5>
+                <h6>H6: Note about heading size</h6>
+            </div>
+        </div>
+
+        <div class="knowledge-box">
+            <h3></h3>
+            <div class="tip-box">
+                <strong>Tip:</strong> Use only one &lt;h1&gt; per page - it represents the main topic or title.
+            </div>
+            <div class="note-box">
+                <strong>Note:</strong> Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
